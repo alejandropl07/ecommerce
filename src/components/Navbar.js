@@ -9,10 +9,10 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import logo from "../assets/logo.png";
 import { Badge } from "@mui/material";
 import { Link } from "react-router-dom";
-import { useStateValue } from '../StateProvider';
+import { useStateValue } from "../StateProvider";
 
 export default function Navbar() {
-  const [{basket}, dispatch]  = useStateValue();
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "7rem" }}>
       <AppBar
@@ -48,9 +48,11 @@ export default function Navbar() {
             Hello Guest
           </Typography>
 
-          <Button variant="outlined">
-            <strong> Sign In </strong>
-          </Button>
+          <Link to="/sign-in">
+            <Button variant="outlined">
+              <strong> Sign In </strong>
+            </Button>
+          </Link>
 
           <Link to="/checkout-page">
             <IconButton

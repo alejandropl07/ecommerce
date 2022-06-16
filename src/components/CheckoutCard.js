@@ -57,8 +57,8 @@ function CheckoutCard({ product }) {
               <p>&#11088;</p>
             ))}
         </div>
-        <IconButton aria-label="delete">
-          <Delete sx={{ marginLeft: "auto" }} onClick={removeItem} />
+        <IconButton aria-label="delete" onClick={removeItem}>
+          <Delete sx={{ marginLeft: "auto" }} />
         </IconButton>
       </CardActions>
     </Card>
