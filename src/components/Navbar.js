@@ -9,8 +9,10 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import logo from "../assets/logo.png";
 import { Badge } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useStateValue } from '../StateProvider';
 
 export default function Navbar() {
+  const [{basket}, dispatch]  = useStateValue();
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "7rem" }}>
       <AppBar
@@ -56,7 +58,7 @@ export default function Navbar() {
               color="inherit"
               sx={{ marginRight: "1rem" }}
             >
-              <Badge badgeContent={5} color="secondary">
+              <Badge badgeContent={basket.length} color="secondary">
                 <ShoppingCartIcon fontSize="large" color="primary" />
               </Badge>
             </IconButton>
