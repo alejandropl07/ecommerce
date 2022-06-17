@@ -8,11 +8,30 @@ import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import logo from "../assets/logo.png";
 import { Badge } from "@mui/material";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
+import { actionTypes } from "../reducer";
 
 export default function Navbar() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  const navigate = useNavigate();
+
+  const handleSignOut = () => {
+    if (user) {
+      auth.signOut();
+      dispatch({
+        type: actionTypes.EMPTY_BASKET,
+        basket: [],
+      });
+      dispatch({
+        type: actionTypes.SET_USER,
+        user: null,
+      });
+      // navigate("/sign-in");
+    }
+  };
+
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "7rem" }}>
       <AppBar
@@ -45,12 +64,12 @@ export default function Navbar() {
             component="paragraph"
             sx={{ marginRight: "1rem" }}
           >
-            Hello Guest
+            Hello {user ? user.email : "Guest"}
           </Typography>
 
           <Link to="/sign-in">
-            <Button variant="outlined">
-              <strong> Sign In </strong>
+            <Button variant="outlined" onClick={handleSignOut}>
+              <strong> {user ? "Sign Out" : "Sign In"} </strong>
             </Button>
           </Link>
 
