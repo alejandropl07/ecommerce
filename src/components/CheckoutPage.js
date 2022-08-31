@@ -12,7 +12,7 @@ function CheckoutPage() {
     return (
       <>
         {basket?.map((item) => (
-          <Grid item xs={12} sm={8} md={6} lg={4} container spacing={2}>
+          <Grid key={item.id} item xs={12} sm={8} md={6} lg={4} container spacing={2}>
             <CheckoutCard key={item.id} product={item} />
           </Grid>
         ))}

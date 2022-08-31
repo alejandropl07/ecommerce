@@ -11,7 +11,7 @@ function Products() {
       <Grid container spacing={2}>
           {products.map((product)   =>  {
               return(
-        <Grid item xs={12} sm={6} md={4} lg={3}>
+        <Grid key={product.id} item xs={12} sm={6} md={4} lg={3}>
             <Product    key={product.id}
             product={product}/>
         </Grid>

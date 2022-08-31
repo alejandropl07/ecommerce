@@ -77,7 +77,7 @@ function Product({ product }) {
         {Array(rating)
           .fill()
           .map((_, i) => (
-            <p>&#11088;</p>
+            <p key={i}>&#11088;</p>
           ))}
         <ExpandMore
           expand={expanded}
@@ -90,7 +90,7 @@ function Product({ product }) {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>{description}</Typography>
+          <Typography>{description}</Typography>
         </CardContent>
       </Collapse>
     </Card>

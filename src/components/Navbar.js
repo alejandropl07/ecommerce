@@ -61,7 +61,7 @@ export default function Navbar() {
           <Typography
             variant="h6"
             color="textPrimary"
-            component="paragraph"
+            component="p"
             sx={{ marginRight: "1rem" }}
           >
             Hello {user ? user.email : "Guest"}

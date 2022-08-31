@@ -22,7 +22,7 @@ function CheckoutCard({ product }) {
     });
 
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth: 345, marginBottom: "2rem"}}>
       <CardHeader
         action={
           <Typography
