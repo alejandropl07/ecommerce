@@ -12,19 +12,19 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function App() {
-  const [{ user }, dispatch] = useStateValue();
+  // const [{ user }, dispatch] = useStateValue();
 
-  useEffect(() => {
-    auth.onAuthStateChanged((authUser) => {
-      console.log(authUser);
-      if (authUser) {
-        dispatch({
-          type: actionTypes.SET_USER,
-          user: authUser,
-        });
-      }
-    });
-  }, []);
+  // useEffect(() => {
+  //   auth.onAuthStateChanged((authUser) => {
+  //     console.log(authUser);
+  //     if (authUser) {
+  //       dispatch({
+  //         type: actionTypes.SET_USER,
+  //         user: authUser,
+  //       });
+  //     }
+  //   });
+  // }, []);
 
   return (
     <Router>

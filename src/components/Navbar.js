@@ -12,25 +12,26 @@ import { Link, useNavigate } from "react-router-dom";
 import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
 import { actionTypes } from "../reducer";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const { favorites } = useSelector((state) => state);
   const navigate = useNavigate();
 
-  const handleSignOut = () => {
-    if (user) {
-      auth.signOut();
-      dispatch({
-        type: actionTypes.EMPTY_BASKET,
-        basket: [],
-      });
-      dispatch({
-        type: actionTypes.SET_USER,
-        user: null,
-      });
-      // navigate("/sign-in");
-    }
-  };
+  // const handleSignOut = () => {
+  //   if (user) {
+  //     auth.signOut();
+  //     dispatch({
+  //       type: actionTypes.EMPTY_BASKET,
+  //       basket: [],
+  //     });
+  //     dispatch({
+  //       type: actionTypes.SET_USER,
+  //       user: null,
+  //     });
+  //     // navigate("/sign-in");
+  //   }
+  // };
 
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "7rem" }}>
@@ -64,12 +65,12 @@ export default function Navbar() {
             component="p"
             sx={{ marginRight: "1rem" }}
           >
-            Hello {user ? user.email : "Guest"}
+            Hello Guest
           </Typography>
 
           <Link to="/sign-in">
-            <Button variant="outlined" onClick={handleSignOut}>
-              <strong> {user ? "Sign Out" : "Sign In"} </strong>
+            <Button variant="outlined">
+              <strong> "Sign Out" </strong>
             </Button>
           </Link>
 
@@ -79,7 +80,7 @@ export default function Navbar() {
               color="inherit"
               sx={{ marginRight: "1rem" }}
             >
-              <Badge badgeContent={basket.length} color="secondary">
+              <Badge badgeContent={favorites.length} color="secondary">
                 <ShoppingCartIcon fontSize="large" color="primary" />
               </Badge>
             </IconButton>

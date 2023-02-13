@@ -13,6 +13,7 @@ import { AddShoppingCart } from "@mui/icons-material";
 import accounting from "accounting";
 import { actionTypes } from '../reducer';
 import { useStateValue } from '../StateProvider';
+import { useSelector } from "react-redux";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,22 +29,7 @@ const ExpandMore = styled((props) => {
 function Product({ product }) {
   const { id, name, productType, price, rating, image, description } = product;
   const [expanded, setExpanded] = useState(false);
-  const [{basket}, dispatch]  = useStateValue();
-
-  const addToBasket = () => {
-    dispatch({
-      type: actionTypes.ADD_TO_BASKET,
-      item: {
-        id,
-        name,
-        productType,
-        price,
-        rating,
-        image,
-        description,
-      },
-    });
-  };
+  const { favorites } = useSelector((state) => state);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -71,7 +57,7 @@ function Product({ product }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="Add to Cart" onClick={addToBasket}>
+        <IconButton aria-label="Add to Cart">
           <AddShoppingCart fontSize="large" />
         </IconButton>
         {Array(rating)
