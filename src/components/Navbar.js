@@ -13,25 +13,11 @@ import { useStateValue } from "../StateProvider";
 import { auth } from "../firebase";
 import { actionTypes } from "../reducer";
 import { useSelector } from "react-redux";
+import { Favorite } from "@mui/icons-material";
 
 export default function Navbar() {
   const { favorites } = useSelector((state) => state);
   const navigate = useNavigate();
-
-  // const handleSignOut = () => {
-  //   if (user) {
-  //     auth.signOut();
-  //     dispatch({
-  //       type: actionTypes.EMPTY_BASKET,
-  //       basket: [],
-  //     });
-  //     dispatch({
-  //       type: actionTypes.SET_USER,
-  //       user: null,
-  //     });
-  //     // navigate("/sign-in");
-  //   }
-  // };
 
   return (
     <Box sx={{ flexGrow: 1, marginBottom: "7rem" }}>
@@ -80,8 +66,8 @@ export default function Navbar() {
               color="inherit"
               sx={{ marginRight: "1rem" }}
             >
-              <Badge badgeContent={favorites.length} color="secondary">
-                <ShoppingCartIcon fontSize="large" color="primary" />
+              <Badge badgeContent={favorites?.length} color="secondary">
+                <Favorite fontSize="large" color="red" />
               </Badge>
             </IconButton>
           </Link>

@@ -1,40 +1,92 @@
-const products  = [
-    {
-        id: 1,
-        name: "Shoes",
-        productType: "Vans shoes",
-        price: 50,
-        rating: 4,
-        image: "https://i.pinimg.com/originals/63/81/8e/63818e317804c0695b615eb533b67195.jpg",
-        description: "First known as the Vans #36, the Old Skool debuted in 1977 with a unique new addition: a random doodle drawn by founder Paul Van Doren, and originally referred to as the “jazz stripe.” Today, the famous Vans Sidestripe has become the unmistakable—and instantly recognizable—hallmark of the Vans brand. Constructed with durable suede and canvas uppers in a range of fresh colorways, the Old Skool pays homage to our heritage while ensuring that this low top, lace-up shoe remains as iconic as ever. It also features re-enforced toe caps, supportive padded collars, and signature rubber waffle outsoles."
-    },
-    { 
-        id: 2,
-        name: "Macbook",
-        productType: "Apple Macbook",
-        price: 1100,
-        rating: 4,
-        image: "https://www.apple.com/v/macbook-pro-14-and-16/b/images/overview/hero/hero_intro_endframe__e6khcva4hkeq_large.jpg",
-        description: "The Apple MacBook Pro 2021 (14-inch) is an important laptop. And that's not only because of what it has but also for what it erases. The marquee features start with the M1 Pro chip, a seriously super-charged upgrade over the M1 chips that upped speeds and battery life last year."
-    },
-    { 
-        id: 3,
-        name: "Iphone",
-        productType: "Apple Iphone",
-        price: 900,
-        rating: 5,
-        image: "https://ipadizate.com/hero/2022/01/iPhone-8-negro.jpg?width=480&aspect_ratio=19:10&format=nowebp",
-        description: "The iPhone is a smartphone made by Apple that combines a computer, iPod, digital camera and cellular phone into one device with a touchscreen interface. The iPhone runs the iOS operating system, and in 2021 when the iPhone 13 was introduced, it offered up to 1 TB of storage and a 12-megapixel camera."
-    },
-    { 
-        id: 4,
-        name: "AirPods",
-        productType: "Apple AirPods",
-        price: 40,
-        rating: 3,
-        image: "https://www.notebookcheck.org/fileadmin/Notebooks/News/_nc3/Apple_AirPods_Pro_6.jpg",
-        description: "Simply take them out of the charging case, put them in your ears, and they connect immediately-immersing you in rich, high-quality sound"
-    },
-]
+const products = [
+  {
+    id: 1,
+    name: "Apartamento",
+    productType: "Habana Vieja",
+    price: 50,
+    rating: 4,
+    image:
+      "https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2FzYSUyMG1vZGVybmF8ZW58MHx8MHx8&w=1000&q=80",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 2,
+    name: "Casa",
+    productType: "10 de Octubre",
+    price: 1100,
+    rating: 4,
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKfn_sNIZov86DXYB-hJbSUNhI4ferIi_dgA&usqp=CAU",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 3,
+    name: "Casa",
+    productType: "Vedado",
+    price: 900,
+    rating: 5,
+    image:
+      "https://s1.eestatic.com/2019/08/09/omicrono/omicrono_420219253_131917136_1706x960.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba.",
+  },
+  {
+    id: 4,
+    name: "Casa",
+    productType: "Playa",
+    price: 40,
+    rating: 3,
+    image:
+      "https://www.arquitecturaydiseno.es/medio/2022/02/24/exterior-casa-con-piscina-en-rusia_4f107d3a_2000x1125.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 5,
+    name: "Casa",
+    productType: "Playa",
+    price: 40,
+    rating: 3,
+    image:
+      "https://www.arquitecturaydiseno.es/medio/2022/02/24/exterior-casa-con-piscina-en-rusia_4f107d3a_2000x1125.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 6,
+    name: "Casa",
+    productType: "Playa",
+    price: 40,
+    rating: 3,
+    image:
+      "https://www.arquitecturaydiseno.es/medio/2022/02/24/exterior-casa-con-piscina-en-rusia_4f107d3a_2000x1125.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 7,
+    name: "Casa",
+    productType: "Playa",
+    price: 40,
+    rating: 3,
+    image:
+      "https://www.arquitecturaydiseno.es/medio/2022/02/24/exterior-casa-con-piscina-en-rusia_4f107d3a_2000x1125.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+  {
+    id: 8,
+    name: "Casa",
+    productType: "Playa",
+    price: 40,
+    rating: 3,
+    image:
+      "https://www.arquitecturaydiseno.es/medio/2022/02/24/exterior-casa-con-piscina-en-rusia_4f107d3a_2000x1125.jpg",
+    description:
+      "Se vende apartamento capitalista en el Vedado. El apartamento se ubica en un 9no piso (último) y consta de 104 metros cuadrados, está ubicado justo frente al malecón con una vista excepcional. Es un apto NUEVO, de LUJO, hecho al detalle con muebles y electrodomésticos importados. La propiedad consta de 2 habitaciones (una mediana y la otra es máster) con sus closets, vestidor grande, sala, cocina, comedor, 1 baño, piso de porcelanato 1 cuarto pequeño de lavado, balcón grande, tanques de agua independientes. El edificio y el apto están en perfecto estado, son dos aptos por piso nada más. Elevador prácticamente nuevo y moderno. El apartamento se vende con todo adentro: Camas y mesas de noches modernas (compradas en El Dorado), juegos de muebles (El Dorado), lavadora moderna, 2 TV planos OLED (ÚLTIMA TECNOLOGÍA), barra de sonido y subufel BOSÉ, Cocina completa con refrigerador de pantalla táctil, lavavajillas, cocina de inducción, sartenes de inducción (especiales para esa cocina), batidora, microwave, cubiertos, etc. Todo nuevo de paquete en cajas. Gas de la calle. Posibilidad de garaje, pero se renta aparte. Puede pagar por transferencia fuera de Cuba. ",
+  },
+];
 
 export default products;

@@ -9,11 +9,10 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { AddShoppingCart } from "@mui/icons-material";
+import { Favorite } from "@mui/icons-material";
 import accounting from "accounting";
-import { actionTypes } from '../reducer';
-import { useStateValue } from '../StateProvider';
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addFavorite } from "../features/favorites/favoritesSlice";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -30,9 +29,14 @@ function Product({ product }) {
   const { id, name, productType, price, rating, image, description } = product;
   const [expanded, setExpanded] = useState(false);
   const { favorites } = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+  };
+
+  const handleAddFavorite = () => {
+    dispatch(addFavorite(product));
   };
 
   return (
@@ -57,8 +61,8 @@ function Product({ product }) {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="Add to Cart">
-          <AddShoppingCart fontSize="large" />
+        <IconButton aria-label="Add to Favorites" onClick={handleAddFavorite}>
+          <Favorite fontSize="large" />
         </IconButton>
         {Array(rating)
           .fill()
